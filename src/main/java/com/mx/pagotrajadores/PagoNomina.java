@@ -56,7 +56,7 @@ public class PagoNomina extends JFrame {
 		txtHoras.setColumns(10);
 		
 		txtR = new JTextArea();
-		txtR.setBounds(49, 180, 331, 92);
+		txtR.setBounds(49, 166, 331, 123);
 		contentPane.add(txtR);
 		
 		
@@ -93,11 +93,11 @@ public class PagoNomina extends JFrame {
 			}
 		});
 		
-		btnMostrar.setBounds(101, 149, 96, 21);
+		btnMostrar.setBounds(101, 140, 96, 21);
 		contentPane.add(btnMostrar);
 		
 		JButton btnLimpiar = new JButton("LIMPIAR");
-		btnLimpiar.setBounds(227, 149, 96, 21);
+		btnLimpiar.setBounds(227, 140, 96, 21);
 		contentPane.add(btnLimpiar);
 		
 		//valio
@@ -114,7 +114,7 @@ public class PagoNomina extends JFrame {
 				
 			}
 		});
-		btnSalir.setBounds(49, 282, 85, 21);
+		btnSalir.setBounds(49, 292, 85, 21);
 		contentPane.add(btnSalir);
 		
 		JLabel lbHorasTrabajo = new JLabel("Horas de Trabajo");
