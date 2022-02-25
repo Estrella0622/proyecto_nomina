@@ -1,8 +1,5 @@
 package com.mx.pagotrajadores;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -10,6 +7,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class PagoNomina extends JFrame {
 
@@ -30,7 +29,12 @@ public class PagoNomina extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		componentes();
 		
+		
+	}
+	
+	public void componentes() {
 		JLabel lbPagoTrabajadores = new JLabel("Pago de trabajadores");
 		lbPagoTrabajadores.setBounds(155, 10, 132, 13);
 		contentPane.add(lbPagoTrabajadores);
@@ -46,6 +50,12 @@ public class PagoNomina extends JFrame {
 		txtHoras.setColumns(10);
 		
 		JButton btnMostrar = new JButton("MOSTRAR");
+		btnMostrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
 		btnMostrar.setBounds(112, 149, 85, 21);
 		contentPane.add(btnMostrar);
 		
@@ -54,11 +64,11 @@ public class PagoNomina extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JTextArea txtR = new JTextArea();
-		txtR.setBounds(83, 195, 270, 77);
+		txtR.setBounds(49, 195, 331, 77);
 		contentPane.add(txtR);
 		
 		JButton btnSalir = new JButton("SALIR");
-		btnSalir.setBounds(93, 282, 85, 21);
+		btnSalir.setBounds(49, 282, 85, 21);
 		contentPane.add(btnSalir);
 		
 		JLabel lbHorasTrabajo = new JLabel("Horas de Trabajo");
