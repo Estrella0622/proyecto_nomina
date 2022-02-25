@@ -1,4 +1,4 @@
-package com.mx.pagotrajadores;
+package pagotrajadores;
 
 public class SistemaPago {
 	public static void main(String[] args) {

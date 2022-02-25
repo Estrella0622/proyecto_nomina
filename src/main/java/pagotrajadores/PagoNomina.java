@@ -1,4 +1,4 @@
-package com.mx.pagotrajadores;
+package pagotrajadores;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
