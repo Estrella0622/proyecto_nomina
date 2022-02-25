@@ -18,6 +18,10 @@ public class PagoNomina extends JFrame {
 	private JTextField txtHoras;
 	private JTextField txtTarifas;
 	private JTextArea txtR;
+	private JButton btnSalir;
+	private JButton btnMostrar;
+	private JButton btnLimpiar;
+
 
 	/**
 	 * se crea un frame
@@ -47,12 +51,12 @@ public class PagoNomina extends JFrame {
 		txtTrabajador.setColumns(10);
 		
 		txtHoras = new JTextField();
-		txtHoras.setBounds(49, 106, 109, 24);
+		txtHoras.setBounds(49, 106, 148, 24);
 		contentPane.add(txtHoras);
 		txtHoras.setColumns(10);
 		
 		txtR = new JTextArea();
-		txtR.setBounds(49, 195, 331, 77);
+		txtR.setBounds(49, 180, 331, 92);
 		contentPane.add(txtR);
 		
 		
@@ -89,18 +93,23 @@ public class PagoNomina extends JFrame {
 			}
 		});
 		
-		btnMostrar.setBounds(112, 149, 85, 21);
+		btnMostrar.setBounds(101, 149, 96, 21);
 		contentPane.add(btnMostrar);
 		
-		JButton btnNewButton_1 = new JButton("LIMPIAR");
-		btnNewButton_1.setBounds(227, 149, 85, 21);
-		contentPane.add(btnNewButton_1);
+		JButton btnLimpiar = new JButton("LIMPIAR");
+		btnLimpiar.setBounds(227, 149, 96, 21);
+		contentPane.add(btnLimpiar);
 		
 		//valio
 		JButton btnSalir = new JButton("SALIR");
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int r = JOptionPane.showOptionDialog(this, "Estas seguro de salir...?","Control de Pagos",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,null,null);
+				int r = JOptionPane.showOptionDialog(null, 
+						"Estas seguro de salir...?",
+						"Control de Pagos",
+						JOptionPane.YES_NO_OPTION,
+						JOptionPane.QUESTION_MESSAGE,
+						null,null,null);
 				if(r == 0) System.exit(0);
 				
 			}
@@ -109,12 +118,12 @@ public class PagoNomina extends JFrame {
 		contentPane.add(btnSalir);
 		
 		JLabel lbHorasTrabajo = new JLabel("Horas de Trabajo");
-		lbHorasTrabajo.setBounds(49, 83, 96, 13);
+		lbHorasTrabajo.setBounds(49, 83, 148, 13);
 		contentPane.add(lbHorasTrabajo);
 		
 		txtTarifas = new JTextField();
 		txtTarifas.setColumns(10);
-		txtTarifas.setBounds(259, 106, 109, 24);
+		txtTarifas.setBounds(259, 106, 132, 24);
 		contentPane.add(txtTarifas);
 		
 		JLabel lbTarifaHora = new JLabel("Tarifa por Hora");
