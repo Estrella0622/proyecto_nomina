@@ -14,56 +14,64 @@ import javax.swing.JTextArea;
 public class PagoNomina extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField txtTrabajador;
+	private JTextField txtHoras;
+	private JTextField txtTarifas;
 
 	/**
 	 * Create the frame.
 	 */
 	public PagoNomina() {
-		PagoNomina frame = new PagoNomina();
-		frame.setVisible(true);
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		//posicion y tamaño de la ventana
+		setBounds(100, 100, 450, 350);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(195, 10, 45, 13);
-		contentPane.add(lblNewLabel);
+		JLabel lbPagoTrabajadores = new JLabel("Pago de trabajadores");
+		lbPagoTrabajadores.setBounds(155, 10, 132, 13);
+		contentPane.add(lbPagoTrabajadores);
 		
-		textField = new JTextField();
-		textField.setBounds(170, 39, 96, 19);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtTrabajador = new JTextField();
+		txtTrabajador.setBounds(49, 39, 331, 34);
+		contentPane.add(txtTrabajador);
+		txtTrabajador.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(49, 83, 96, 19);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		txtHoras = new JTextField();
+		txtHoras.setBounds(49, 106, 109, 24);
+		contentPane.add(txtHoras);
+		txtHoras.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(284, 83, 96, 19);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		JButton btnMostrar = new JButton("MOSTRAR");
+		btnMostrar.setBounds(112, 149, 85, 21);
+		contentPane.add(btnMostrar);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(111, 127, 85, 21);
-		contentPane.add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.setBounds(229, 127, 85, 21);
+		JButton btnNewButton_1 = new JButton("LIMPIAR");
+		btnNewButton_1.setBounds(227, 149, 85, 21);
 		contentPane.add(btnNewButton_1);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(84, 158, 270, 77);
-		contentPane.add(textArea);
+		JTextArea txtR = new JTextArea();
+		txtR.setBounds(83, 195, 270, 77);
+		contentPane.add(txtR);
 		
-		JButton btnNewButton_2 = new JButton("New button");
-		btnNewButton_2.setBounds(84, 245, 85, 21);
-		contentPane.add(btnNewButton_2);
+		JButton btnSalir = new JButton("SALIR");
+		btnSalir.setBounds(93, 282, 85, 21);
+		contentPane.add(btnSalir);
+		
+		JLabel lbHorasTrabajo = new JLabel("Horas de Trabajo");
+		lbHorasTrabajo.setBounds(49, 83, 96, 13);
+		contentPane.add(lbHorasTrabajo);
+		
+		txtTarifas = new JTextField();
+		txtTarifas.setColumns(10);
+		txtTarifas.setBounds(259, 106, 109, 24);
+		contentPane.add(txtTarifas);
+		
+		JLabel lbTarifaHora = new JLabel("Tarifa por Hora");
+		lbTarifaHora.setBounds(259, 83, 96, 13);
+		contentPane.add(lbTarifaHora);
 	}
 }
