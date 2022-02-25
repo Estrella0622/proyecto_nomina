@@ -30,7 +30,7 @@ public class PagoNomina extends JFrame {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//posicion y tamaño de la ventana 
-		setBounds(100, 100, 450, 350);
+		setBounds(100, 100, 450, 380);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -42,21 +42,21 @@ public class PagoNomina extends JFrame {
 	
 	public void componentes() {
 		JLabel lbPagoTrabajadores = new JLabel("Pago de trabajadores");
-		lbPagoTrabajadores.setBounds(155, 10, 132, 13);
+		lbPagoTrabajadores.setBounds(156, 10, 132, 13);
 		contentPane.add(lbPagoTrabajadores);
 		
 		txtTrabajador = new JTextField();
-		txtTrabajador.setBounds(49, 39, 331, 34);
+		txtTrabajador.setBounds(49, 48, 331, 34);
 		contentPane.add(txtTrabajador);
 		txtTrabajador.setColumns(10);
 		
 		txtHoras = new JTextField();
-		txtHoras.setBounds(49, 106, 148, 24);
+		txtHoras.setBounds(49, 114, 148, 24);
 		contentPane.add(txtHoras);
 		txtHoras.setColumns(10);
 		
 		txtR = new JTextArea();
-		txtR.setBounds(49, 166, 331, 123);
+		txtR.setBounds(49, 179, 331, 123);
 		contentPane.add(txtR);
 		
 		
@@ -93,11 +93,11 @@ public class PagoNomina extends JFrame {
 			}
 		});
 		
-		btnMostrar.setBounds(101, 140, 96, 21);
+		btnMostrar.setBounds(101, 148, 96, 21);
 		contentPane.add(btnMostrar);
 		
 		JButton btnLimpiar = new JButton("LIMPIAR");
-		btnLimpiar.setBounds(227, 140, 96, 21);
+		btnLimpiar.setBounds(227, 148, 96, 21);
 		contentPane.add(btnLimpiar);
 		
 		//valio
@@ -114,20 +114,24 @@ public class PagoNomina extends JFrame {
 				
 			}
 		});
-		btnSalir.setBounds(49, 292, 85, 21);
+		btnSalir.setBounds(49, 312, 85, 21);
 		contentPane.add(btnSalir);
 		
 		JLabel lbHorasTrabajo = new JLabel("Horas de Trabajo");
-		lbHorasTrabajo.setBounds(49, 83, 148, 13);
+		lbHorasTrabajo.setBounds(49, 91, 148, 13);
 		contentPane.add(lbHorasTrabajo);
 		
 		txtTarifas = new JTextField();
 		txtTarifas.setColumns(10);
-		txtTarifas.setBounds(259, 106, 132, 24);
+		txtTarifas.setBounds(259, 114, 132, 24);
 		contentPane.add(txtTarifas);
 		
 		JLabel lbTarifaHora = new JLabel("Tarifa por Hora");
-		lbTarifaHora.setBounds(259, 83, 96, 13);
+		lbTarifaHora.setBounds(259, 91, 96, 13);
 		contentPane.add(lbTarifaHora);
+		
+		JLabel lbNombre = new JLabel("Nombre del trabajador");
+		lbNombre.setBounds(49, 35, 114, 13);
+		contentPane.add(lbNombre);
 	}
 }
