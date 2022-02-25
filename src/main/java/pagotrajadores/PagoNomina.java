@@ -131,7 +131,7 @@ public class PagoNomina extends JFrame {
 		contentPane.add(lbTarifaHora);
 		
 		JLabel lbNombre = new JLabel("Nombre del trabajador");
-		lbNombre.setBounds(49, 35, 148, 13);
+		lbNombre.setBounds(49, 33, 148, 13);
 		contentPane.add(lbNombre);
 	}
 }
